@@ -1,6 +1,8 @@
-# Template
+# Apple OS 26 Template
 
 A SwiftUI template project featuring a modern tabbed interface with sidebar adaptable navigation and web content integration.
+
+<img width="2003" alt="Demo" src="https://github.com/user-attachments/assets/076beba3-0a4b-4fab-b806-e973893224ca" />
 
 ## Overview
 
