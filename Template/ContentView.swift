@@ -6,16 +6,64 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct ContentView: View {
+    @Environment(\.tabViewBottomAccessoryPlacement) var placement
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        tab
+    }
+    
+    var tab: some View {
+        TabView {
+            Tab("View 1", systemImage: "1.calendar") {
+                WebView(url: URL(string: "https://www.apple.com"))
+                    .ignoresSafeArea(edges: .all)
+            }
+            
+            Tab("View 2", systemImage: "2.calendar") {
+                // Replace this with View
+                Text("View 2")
+            }
+            
+            Tab("View 3", systemImage: "3.calendar") {
+                // Replace this with View
+                Text("View 3")
+            }
+            
+            Tab("View 4", systemImage: "4.calendar") {
+                // Replace this with View
+                Text("View 4")
+            }
+            
+            Tab("Search", systemImage: "magnifyingglass", role: .search) {
+                // Replace this with View
+                NavigationStack {
+                    Text("Search List")
+                        .searchable(text: .constant(""), prompt: "")
+                }
+            }
         }
-        .padding()
+        .tabViewStyle(.sidebarAdaptable)
+        .tabViewBottomAccessory {
+            // Still not working on beta 3
+            switch placement {
+            case .inline:
+                Text("Inline")
+            case .expanded:
+                Text("Expanded")
+            default:
+                Text("Floating")
+            }
+        }
+        .tabBarMinimizeBehavior(.onScrollDown)
+        .toolbar {
+            ToolbarItem(placement: .bottomBar) {
+                Text("Bottom")
+                    .frame(width: 150)
+            }
+        }
     }
 }
 
