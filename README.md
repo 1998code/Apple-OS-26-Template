@@ -90,3 +90,6 @@ Template/
 ## License
 
 This project is available as a template for your own projects. Modify and use as needed.
+
+## Previous SwiftUI Template
+https://github.com/1998code/iOS16-Live-Activities
