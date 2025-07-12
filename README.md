@@ -48,7 +48,7 @@ This project demonstrates advanced SwiftUI features including:
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/1998code/Apple-OS-26-Template
    cd Template
    ```
 
