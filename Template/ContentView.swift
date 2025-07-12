@@ -48,14 +48,18 @@ struct ContentView: View {
         .tabViewStyle(.sidebarAdaptable)
         #if os(iOS)
         .tabViewBottomAccessory {
-            // Still not working on beta 3
-            switch placement {
-            case .inline:
-                Text("Inline")
-            case .expanded:
-                Text("Expanded")
-            default:
-                Text("Floating")
+            HStack {
+                Spacer()
+                // Still not working on beta 3
+                switch placement {
+                case .inline:
+                    Text("Inline")
+                case .expanded:
+                    Text("Expanded")
+                default:
+                    Text("Floating")
+                }
+                Spacer()
             }
         }
         .tabBarMinimizeBehavior(.onScrollDown)
