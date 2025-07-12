@@ -46,6 +46,7 @@ struct ContentView: View {
             }
         }
         .tabViewStyle(.sidebarAdaptable)
+        #if os(iOS)
         .tabViewBottomAccessory {
             // Still not working on beta 3
             switch placement {
@@ -64,6 +65,7 @@ struct ContentView: View {
                     .frame(width: 150)
             }
         }
+        #endif
     }
 }
 
