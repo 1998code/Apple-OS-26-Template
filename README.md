@@ -34,7 +34,7 @@ This project demonstrates advanced SwiftUI features including:
 ### 🛠 **App Structure**
 - **Clean Architecture**: Separated concerns with dedicated files
 - **SwiftUI Best Practices**: Modern SwiftUI patterns and conventions
-- **Xcode 16 Ready**: Uses latest Xcode project format
+- **Xcode 26 Ready**: Uses latest Xcode project format
 
 ## Requirements
 
